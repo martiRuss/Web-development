@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+<script>
+	function check() {
+	var box1 = document.getElementById("box1");
+	var box2 = document.getElementById("box2");
+	var opp = document.getElementById("opp");
+	var comment = document.getElementById("comment");
+	var box3 = document.getElementById("box3");	
+	
+
+	if (opp.value == "+") {
+		var result = Number(box1.value) + Number(box2.value);
+	
+	} else if (opp.value == "-") {
+		var result = Number(box1.value) - Number(box2.value);
+	
+	} else {
+		var result = Number(box1.value) * Number(box2.value);
+
+	}
+	
+	if (result == box3.value) {
+		comment.innerHTML = "Correct!";
+	} else {
+		comment.innerHTML = "Incorrect, please try again."
+	}
+
+
+
+	}
+
+</script>
+
+</head>	
+	<input type="text" id="box1" />
+	<select id="opp">
+		<option > + </option>
+		<option > - </option>
+		<option > x </option>
+	</select>
+	<input type="text" id="box2" />
+	=
+	<input type="text" id="box3" />
+	
+	<button onClick="check()" > Check </button>	
+	
+	<span id="comment" />
+
+<body>
+
+</body>
+
+
+</html>

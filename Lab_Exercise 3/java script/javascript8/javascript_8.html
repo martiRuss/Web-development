@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Swap</title>
+	<style>
+		.image-container {
+			display: inline-block;
+			margin: 10px;
+		}
+	</style>
+	<script>
+		function lionMouseOver() {
+		    var lionImg = document.getElementById("lion");
+		    var frogImg = document.getElementById("frog");
+
+		    // Swap the source of the lion and frog images
+		    var tempSrc = lionImg.src;
+		    lionImg.src = frogImg.src;
+		    frogImg.src = tempSrc;
+		}
+
+		function frogMouseOver() {
+		    var lionImg = document.getElementById("lion");
+		    var frogImg = document.getElementById("frog");
+
+		    // Swap the source of the lion and frog images
+		    var tempSrc = lionImg.src;
+		    lionImg.src = frogImg.src;
+		    frogImg.src = tempSrc;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="image-container">
+		<img src="lion.jpg" id="lion" width="300px" height="200px" onmouseover="lionMouseOver()" />
+	</div>
+	<div class="image-container">
+		<img src="frog.jpg" id="frog" width="300px" height="200px" onmouseover="frogMouseOver()" />
+	</div>
+</body>
+</html>

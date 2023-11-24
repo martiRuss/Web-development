@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Javascript_7</title>
+	<script>
+		function image() {
+		     var correct_text = document.getElementById("correct");
+		     
+		     if(correct_text.value == "display lion") {
+				var img1 = document.getElementById("display_lion");
+				img1.src = "lion.jpg";
+			}
+		     else if (correct_text.value == "display frog") {
+				var img2 = document.getElementById("display_frog");
+				img2.src = "frog.jpg";
+			}
+		     else {
+			  alert("Invalid command");
+		
+			}
+		    
+		}
+	</script>
+</head>
+
+<body>
+	Enter command:
+	<input type="text" id="correct" onChange="image()"/>
+	<img id="display_lion" width="500px" />
+	<img id="display_frog" width="500px" />
+	
+	
+	
+</body>
+
+</html>
+
+

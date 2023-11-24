@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>question1</title>
+		<style>
+		   h1 {
+			text-align: center;
+		    }
+			
+		   h1#heading:hover {
+	 		transform: scale(2);	
+	            }
+		</style>
+	
+		<script>
+			function colorChange(value) {
+			   var a = document.getElementById("heading");
+			   a.style.color = value;
+	
+		}
+		</script>
+	
+	</head>
+	
+	<body>
+		<h1 id="heading">University of Wollongong</h1><br />
+		<button onClick="colorChange('green')">Green</button>
+		<button onClick="colorChange('orange')">Orange</button>
+		<button onClick="colorChange('blue')">Blue</button>
+		
+	</body>
+		
+</html>

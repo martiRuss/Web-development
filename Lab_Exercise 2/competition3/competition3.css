@@ -1,0 +1,19 @@
+#competitionPara {font-size:50px; background-color:#ff000010; padding:30px; text-align:center; border-style:dotted; border-color:red; border-width:5px;}
+
+	.rankingNumber {font-size:60px; color:maroon; text-align:right; vertical-align:top;}
+	#word1 {color:orange}
+	#word2 {color:pink}
+	#word3 {color:blue}
+	.memberList {color:green; padding:10px;}
+	.leader {color:purple}
+	.evenRow {background-color:#cc007711;}
+	.oddRow {background-color:#55ff7720;}
+	#teamTable {padding:20px; border-color:grey; border-style:none; border-collapse:collapse; border-spacing:1px;}
+	.teamColumn {text-align:center; vertical-align:top;}
+	.memberColumn {text-align:left; vertical-align:top;}
+
+	#headerRow {font-size:40px; color:navy; background-color:#00000010;}
+	
+	#teamTable th {border-style:dashed; border-color:black; border-width:5px; padding:20px;}
+
+	#teamTable td {border-style:solid; border-color:gray; border-width:1px; padding:10px;}

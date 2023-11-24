@@ -1,0 +1,54 @@
+<html>
+<head>
+   <title>DOM</title>
+
+   <script>
+	var counter = 0;
+	
+	function order() {
+		var bookTitle = document.getElementById("book");
+		var bTitle = bookTitle.value;
+		
+		var bookCode = document.getElementById("code");
+		var bCode = bookCode.value;
+
+		var bookQuantity = document.getElementById("quantity");
+		var bQuantity = Number(bookQuantity.value);
+	
+	var order_info = bCode + ": " + bTitle + " x " + bQuantity;
+
+	counter = counter + bQuantity;
+	
+
+	var li = document.createElement("li");
+	var orderText = document.createTextNode(order_info);
+	li.appendChild(orderText);
+
+	var listUl = document.getElementById("list")
+	listUl.appendChild(li);
+	
+	
+	var spanCount = document.getElementById("count");
+	spanCount.innerHTML = "Total number of books ordered: " + counter;
+	}
+   </script>
+
+</head>
+
+
+
+<body>
+	Enter book title:
+	<input type="text" id="book" /><br /><br />
+	Enter product code:
+	<input type="text" id="code" /><br /><br />
+	Enter quantity:
+	<input type="text" id="quantity" /><br /><br />	
+	
+	<button onClick="order()">Add to order</button><br />
+
+	<ul id="list"></ul>
+	
+	<span id="count"></span>
+</body>
+</html>

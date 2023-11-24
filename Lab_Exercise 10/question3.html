@@ -1,0 +1,95 @@
+<html>
+   <head>
+	<title>Web Form</title>
+   
+   <script>
+	var x = 0;
+	var y = 0;
+	var result = 0;
+	
+	function numbers()
+	{
+		x = Math.floor(Math.random()*10);
+		y = Math.floor(Math.random()*10);
+		result = x + y;
+		mathEq = x + " + " + y + " = ";
+
+		var mathSpan = document.getElementById("math");
+		mathSpan.innerHTML = "Prove that you are not a robot: " + mathEq;
+	}
+
+	
+	function validateForm()
+	{
+		var userInput = document.getElementById("answer");
+		var userResult = Number(userInput.value);
+		
+		if(userResult != result)
+		{
+			var getSpan = document.getElementById("result");
+			getSpan.innerHTML = "<font color='red'>Wrong</font>";
+			return false;	
+		}
+		return true;		
+	
+	}
+   </script>
+
+   </head>
+
+   <body onLoad="numbers()">
+	<h1>Whhosville library book search</h1> <br /><br />
+	<form action="http://library.whosville/bsearch" method="get" onSubmit="return validateForm()">
+	
+	<table>
+	   <tr>
+		<td>
+		   Author name:
+		</td>
+		<td>
+		   <input type="text" name="author" />
+		</td>
+	   </tr>
+
+	   <tr>
+		<td>
+		   Publication Year:
+		</td>
+		<td>
+		   <input type="text" name="year" />
+		</td>
+	   </tr>
+
+	   <tr>
+		<td valign="top">
+		   Subject:
+		</td>
+		<td>
+		   <input type="checkbox" name="sub" value="mth" > Mathematics</input> <br />
+		   <input type="checkbox" name="sub" value="cs" > Computer Science</input> <br />
+		   <input type="checkbox" name="sub" value="bio" > Biology</input> <br />
+		   <input type="checkbox" name="sub" value="phy" > Physics</input> <br />
+		   <input type="checkbox" name="sub" value="chem" > Chemistry</input> <br />
+	   </tr>	
+	
+	   <tr>
+		<td colspan="2">
+			<span id="math"></span>
+			<input type="text" id="answer" size="5" />
+			<span id="result"></span>
+		</td>
+	   </tr>
+
+	   <tr>
+		<td>
+		</td>
+		<td>
+			<input type="submit" value="Search" />
+			<input type="reset" value="clear" />
+		</td>
+	   </tr>
+	</table>
+	</form>
+
+   </body>
+</html>

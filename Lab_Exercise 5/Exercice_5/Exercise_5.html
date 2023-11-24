@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+<script>
+	var animOn = false;
+	var image_ani;
+	
+	function start() {
+		if (animOn == false) {
+			animOn = true;
+			image_ani = setInterval(catroon, 1200);
+		}	
+	}	
+	
+	var image_list = ["bean.png", "tom.png", "bird.jpeg", "dora.jpg", "mickey.jpg", 			  "olaf.jpg"];
+
+	var counter = 0;
+	function catroon() {
+		
+		if (counter < 6) {
+		var slide_show = document.getElementById("images");
+		slide_show.src = image_list[counter];
+		counter = counter + 1;
+		}
+	}
+
+
+	function stop() {
+		if (animOn) {
+			clearInterval(image_ani);
+			animOn = false;
+		}
+	}
+
+</script>
+
+</head>	
+	<button onClick="start()"> Start slideshow </button>
+	<button onClick="stop()"> Stop slideshow </button>
+	<br /><br />
+	<img id="images" width="400px" />
+<body>
+
+</body>
+
+
+</html>

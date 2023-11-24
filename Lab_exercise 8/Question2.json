@@ -1,0 +1,31 @@
+{
+  "firstName": "Smith",
+  "lastName": "john",
+  "studentId": 1231234,
+  "courseInfo": [
+	{
+	   "subject": "MATH101",
+	   "creditPoint": 4,
+	   "mark": 85,
+	   "grade": "A"
+	},
+	{
+	   "subject": "ECON111",
+	   "creditPoint": 5,
+	   "mark": 70,
+	   "grade": "B"
+	},
+	{
+	   "subject": "CS100",
+	   "creditPoint": 80,
+	   "mark": 85,
+	   "grade": "A"
+	},
+	{
+	   "subject": "LAW121",
+	   "creditPoint": 75,
+	   "mark": 85,
+	   "grade": "B"
+	}
+  ]
+}

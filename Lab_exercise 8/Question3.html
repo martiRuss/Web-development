@@ -1,0 +1,42 @@
+<html>
+  <head>
+     <title>JSON</title>
+     <script>
+	function showJSON() {
+	   var Scode = document.getElementById("subjectcode");
+	   var Stitle = document.getElementById("subjectTitle");
+	   var Scredit = document.getElementById("subjectCredit");
+	   var Score = document.getElementById("subjectCore");
+	   var Jtext = document.getElementById("jsonText");
+
+	   
+	   var studentObj = {};
+	   studentObj.code = Scode.value;
+	   studentObj.title = Stitle.value;
+	   studentObj.cp = Scredit.value;
+	   studentObj.coreFlag = Score.checked;
+
+
+	   var studentJSON = JSON.stringify(studentObj, null, 2);
+	   Jtext.value = studentJSON;
+	}
+     </script>
+  </head>
+  <body>
+	Subject Code:
+	<input type="text" id="subjectcode" value="MATH101" /><br /><br />
+
+	Subject Title: 
+	<input type="text" id="subjectTitle" value="Abstract Algebra" /><br /><br />
+
+	Subject credit point:
+	<input type="text" id="subjectCredit" value="4" /><br /><br />
+
+	Core Subject:
+	<input type="checkBox" id="subjectCore" /><br /><br />
+
+	<button onClick="showJSON()">View JSON</button><br />
+
+	<textarea id="jsonText" ></textarea>
+  </body>
+</html>

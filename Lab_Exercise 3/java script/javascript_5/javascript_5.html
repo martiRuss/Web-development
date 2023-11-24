@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Javascript_5</title>
+	<script>
+		var count = 0;
+		function lion() {
+		    count = count + 1;
+		    var count_lion = document.getElementById("roar");
+		    count_lion.innerHTML = count;
+		}
+		var count_2 = 0;
+		function frog() {
+		    count_2 = count_2 + 1;
+		    var count_frog = document.getElementById("ribbit");
+		    count_frog.innerHTML = count_2;
+		}
+	</script>
+</head>
+
+<body>
+	<img src="lion.jpg" width="500px" onClick="lion()" />
+	<h2 style="color:orange">Number of lion clicks: <span id="roar"> 0 </span></h1>
+	<img src="frog.jpg" width="500px" onClick="frog()" />
+	<h2 style="color:green">Number of frog clicks: <span id="ribbit"> 0 </span></h1>
+	
+</body>
+
+</html>
