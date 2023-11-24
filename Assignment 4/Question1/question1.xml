@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<carService>
+    <carServiceRepository>
+	<carServiceStation name="wollongong">
+		<cars>
+			<carPlate>CL-29-28</carPlate>
+			<model>Nissan X-Trial</model>	
+			<year>2020</year>
+			<serviceCard>
+				<carCard>
+					<date>15/09/2021</date>
+					<service>service 10000km</service>
+				</carCard>
+				<carCard>
+					<date>21/08/2022</date>
+					<service>service 20000km</service>
+				</carCard>
+				<carCard>
+					<date>15/07/2023</date>
+					<service>30000km</service>
+				</carCard>
+			</serviceCard>
+		</cars>
+		<cars>
+			<carPlate>PYU-880</carPlate>
+			<model>BMW 330i</model>	
+			<year>2017</year>
+			<serviceCard>
+				<carCard>
+					<date>23/04/2019</date>
+					<service>service 10000km</service>
+				</carCard>
+				<carCard>
+					<date>28/06/2020</date>
+					<service>service 25000km</service>
+				</carCard>
+				<carCard>
+					<date>01/08/2022</date>
+					<service>40000km</service>
+				</carCard>
+			</serviceCard>
+		</cars>
+	</carServiceStation>
+    </carServiceRepository>
+</carService>

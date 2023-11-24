@@ -1,0 +1,61 @@
+<html>
+<head>
+   <title>calculator</title>
+
+   <script>
+	var counter = 0;
+	var disOverall = 0;
+	function calculate() {
+		var Pname = document.getElementById("product");
+		var productName = Pname.value;
+		
+		var Pprice = document.getElementById("price");
+		var productPrice = Number(Pprice.value);
+
+		var Pdiscount = document.getElementById("discount");
+		var productDiscount = Number(Pdiscount.value);
+	
+		counter = counter + 1;
+
+		var dis = productPrice*productDiscount*0.01;
+
+		var afterD = productPrice - dis;
+	
+		disOverall = disOverall + dis;
+	
+		var order_info = productName + " - " + "price $" + productPrice + ", after discount of " + productDiscount + "%, the price is $" + afterD;
+	
+		
+		var li = document.createElement("li");
+		var orderText = document.createTextNode(order_info);
+		li.appendChild(orderText);
+
+		var listUl = document.getElementById("list")
+		listUl.appendChild(li);
+	
+		var spanCount = document.getElementById("count");
+		spanCount.innerHTML = "Overall discount for " + counter + " product is $" + disOverall;
+		
+	}
+   </script>
+
+</head>
+
+
+
+<body>
+	<h1>Discount Claculator</h1>
+	product:
+	<input type="text" id="product" /><br /><br />
+	price $:
+	<input type="text" id="price" /><br /><br />
+	discount%:
+	<input type="text" id="discount" /><br /><br />	
+	
+	<button onClick="calculate()">calculate</button><br />
+
+	<ol id="list"></ol>
+	
+	<span id="count"></span>
+</body>
+</html>

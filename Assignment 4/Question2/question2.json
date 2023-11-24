@@ -1,0 +1,46 @@
+{
+  "type": "car service repository",
+  "carServiceStation": "wollongong",
+  "cars":[
+	{
+	"carPlate": "CL-29-28",
+	"Model": "NIsan X-Trail",
+	"Year": "2020",
+	"serviceCard":[
+		{
+		   "date": "15/09/2021",
+		   "service": "10000Km"
+		},
+		{
+		   "date": "21/08/2022",
+		   "service": "20000Km"
+		},
+		{
+		   "date": "15/07/2023",
+		   "service": "30000Km"
+		}
+	     ]
+	 },
+
+	{
+	"carPlate": "PYU-880",
+	"Model": "BMW 330i",
+	"Year": "2017",
+	"serviceCard":[
+		{
+		   "date": "23/04/2019",
+		   "service": "10000Km"
+		},
+		{
+		   "date": "28/06/2020",
+		   "service": "25000Km"
+		},
+		{
+		   "date": "01/08/2022",
+		   "service": "40000Km"
+		}
+	     ]
+	 }
+     ]
+
+}
