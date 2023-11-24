@@ -1,0 +1,67 @@
+<html>
+
+<head>
+   <title>A3-task2: My info</title>
+   <style>
+	.textFocus:hover {
+		background-color : pink;	
+	}
+	
+	
+	#display:hover {
+		transform: translate(50px, 50px);
+	}
+
+   </style>
+	
+   <script>
+	function display() {
+		var Sname = document.getElementById("name");
+		var Snumber = document.getElementById("number");
+		var Scolor = document.getElementById("textColor");
+		var Ssize = document.getElementById("textSize");
+		
+		var Sdiv = document.getElementById("display");		
+	
+		Sdiv.innerHTML = "Name: " + Sname.value + "; "+ "Student Number: " + Snumber.value;
+		Sdiv.style.color = Scolor.value;
+		Sdiv.style.fontSize = Ssize.value;
+	
+		
+	}
+	
+	function skewText() {
+		var Sdiv = document.getElementById("display");
+		var Snumber = document.getElementById("number");
+		var skewAngle = Snumber.value.slice(-2);
+		Sdiv.style.transform = "translate(50px, 50px) " + "skew(-" + Number(skewAngle) + "deg)";
+		// Sdiv.style.transform = "skew(-" + Number(skewAngle) + "deg)";
+		
+Sdiv
+		
+	}
+	
+   </script>
+</head>	
+	
+
+<body>
+	Name: 
+	<input type="text" id="name" class="textFocus" /><br /><br />
+
+	Student Number: 
+	<input type="text" id="number" class="textFocus" /><br /><br />
+
+	Color: 
+	<input type="text" id="textColor" class="textFocus" /><br /><br />
+
+	Font size: 
+	<input type="text" id="textSize" class="textFocus" /><br /><br />
+	
+	<button OnClick="display()">Display</button><br /><br />
+
+	<div id="display" onmouseover="skewText()"></div>
+</body>
+
+
+</html>

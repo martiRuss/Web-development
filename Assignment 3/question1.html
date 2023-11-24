@@ -1,0 +1,71 @@
+<html>
+   <head>
+      <title>A3-task1</title>
+
+      <script>
+	 var start_ani;
+	 var animOn = false;
+	 var counter = 0;
+	 var a = 0;
+ 	 var b = 0;
+	 var c = 0;
+	 var color_list = ["yellow", "pink", "orange", "blue"];
+	 var check = false;
+
+	function start() {
+		if (animOn == false) {
+			animOn = true;
+			var startNumber = document.getElementById("startNum");
+	 		var incNumber = document.getElementById("increment");
+			a = Number(startNumber.value);
+			b = Number(incNumber.value);
+			var numInterval = document.getElementById("interval");
+			start_ani = setInterval(numCol, numInterval.value);	
+			}
+		}
+		   
+
+	 function numCol() {
+		counter = a;
+		var dis = document.getElementById("displayNum");
+		dis.innerHTML = counter;
+		dis.style.color = "green";
+		counter = a + b;
+		a = counter;
+		if (check == true) {
+		var x = Math.floor(Math.random() * color_list.length);
+	   	dis.style.color = color_list[x];
+		}
+		check = true;
+	 }
+
+
+	function stop() {
+		if(animOn) {
+			clearInterval(start_ani);
+			check = false;
+			animOn = false;	
+			
+		}
+	}
+
+      </script>
+   </head>
+
+
+   <body>
+	Initial number:
+	<input type="text" id="startNum" /><br /><br />
+	Increase by:
+	<input type="text" id="increment" /><br /><br />
+	time interval(every):
+	<input type="text" id="interval" /> (ms)<br /><br />
+
+	<button onClick="start()">Start</button>
+	<button onClick="stop()">Stop</button><br /><br />
+
+	<span id="displayNum" style="color:green; font-size:100px;" ></span>
+
+
+   </body>
+</html>
