@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<title>A2-Task1</title>
+<script>
+	function get_random() {
+	let x = Math.round(Math.random(0)*9000 + 1000);
+	document.getElementById("random_number").innerHTML = x;
+	document.getElementById("random_number").style.color = "red";
+	}
+	
+	
+	function add5() {
+	if (counter == 0){
+	var add_5 = document.getElementById("random_number");
+	var y = Number(add_5.innerHTML);
+	y = y +5;
+	add_5.innerHTML = y;
+	} else {
+		var original = document.getElementById("random_number");
+		var number_part = original.innerHTML.slice(0,4);
+		var n = Number(number_part) + 5;
+		original.innerHTML = n + original.innerHTML.slice(4);
+	}	
+	}
+
+
+	function col() {
+	var r = Math.floor(Math.random()*4) + 1;
+	if (r == "1") {
+		document.getElementById("random_number").style.color = "yellow";
+	} else if(r == "2") {
+		document.getElementById("random_number").style.color = "green";
+	} else if (r == "3") {
+		document.getElementById("random_number").style.color = "blue";
+	} else {
+		document.getElementById("random_number").style.color = "red";
+	}
+
+	}
+
+
+
+	counter = 0;
+	function emoji() {
+	var e = document.getElementById("random_number");
+	if (counter%2 == 0){
+		e.innerHTML = e.innerHTML + " " + "&#9917;";
+	} else {
+		e.innerHTML = e.innerHTML + " " + "&#127942;";	
+	}
+
+	counter = counter + 1;
+	}
+
+	
+	function reset() {
+		get_random();
+	}
+	
+
+
+
+</script>
+</head>
+
+<body onLoad="get_random()">
+	<button onClick="add5()">Add 5</button>
+	<button onClick="col()">Change colour</button>
+	<button onClick="emoji()">Add emoji</button>
+	<button onClick="reset()">Reset</button><br /><br />
+	<span id="random_number"></span>
+	
+</body>
+
+</html>

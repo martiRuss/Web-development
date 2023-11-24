@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>A2-Task2</title>
+
+<script>
+	
+	var a1 = 0;
+	var b1 = 1;
+	var c1 = 2;
+ 
+	function day() {
+		if (a1 == 0) {
+			var a = document.getElementById("0");
+			a.src = "meadow.jpg";
+
+			var b = document.getElementById("1");
+			b.src = "moon.jpg";
+
+			var c = document.getElementById("2");
+			c.src = "sun.jpeg";
+
+			a1 = 1;
+			b1 = 2;
+			c1 = 0;
+			
+
+		} else if (a1 == 1 && b1 == 2 && c1 == 0) {
+			var d = document.getElementById("0");
+			d.src = "sun.jpeg";
+
+			var e = document.getElementById("2");
+			e.src = "meadow.jpg";
+			
+			a1 = 0;
+			b1 = 2;
+			c1 = 1;
+
+		}
+					
+	}
+
+
+	function eve() {
+		if (a1 == 0 && b1 == 1 && c1 == 2) {
+			var d = document.getElementById("1");
+			d.src = "moon.jpg";
+
+			var e = document.getElementById("2");
+			e.src = "meadow.jpg";
+
+			a1 = 0;
+			b1 = 2;
+			c1 = 1;
+			
+
+		} else if (a1 == 0 && b1 == 2 && c1 == 1) {
+			var f = document.getElementById("1");
+			f.src = "meadow.jpg";
+
+			var g = document.getElementById("2");
+			g.src = "moon.jpg";
+
+			a1 = 0;
+			b1 = 1;
+			c1 = 2;
+
+
+		} else if (a1 == 1 && b1 == 2 && c1 == 0) {
+			var h = document.getElementById("0");
+			h.src = "sun.jpeg";
+
+			var i = document.getElementById("1");
+			i.src = "meadow.jpg";
+
+			var j = document.getElementById("2");
+			j.src = "moon.jpg";
+
+			a1 = 0;
+			b1 = 1;
+			c1 = 2;
+		}
+					
+	}
+	
+
+
+
+	
+
+
+</script>
+
+</head>
+
+<body>
+	
+	<img src="sun.jpeg" id="0" width="400px" onMouseOver="day()" />
+	<img src="meadow.jpg" id="1" width="400px" onMouseOver="eve()" />
+	<img src="moon.jpg" id="2" width="400px" onMouseOver="night()" />
+
+
+
+</body>
+
+
+</html>
